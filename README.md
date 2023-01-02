@@ -1,0 +1,2 @@
+# yosr
+A student platform
