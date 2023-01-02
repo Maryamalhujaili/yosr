@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+
+{% block content %}
+{% if subjects %}
+{% for subject in subjects %}
+<div class="row" style="margin-right: 15px; margin-top: 20px">
+    <div class="column">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            {% block card_content %}
+              <h5 class="card-title">{{ subject.title }}</h5>
+              <p class="card-text">مادة {{ subject.title }} - {{ subject.grade.title }}</p>
+              <a href="{{ subject.link }}" class="btn btn-primary" target="_blank">عرض</a>
+            {% endblock %}
+            </div>
+          </div>
+    </div>
+</div>
+{% endfor %}
+{% else %}
+<h2>لا توجد نتائج للبحث</h2>
+{% endif %}
+{% endblock %}
