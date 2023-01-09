@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['yosr.up.railway.app', 'https://yosr.onrender.com/', 'localhost']
+ALLOWED_HOSTS = ['yosr.up.railway.app', 'yosr.onrender.com', 'localhost']
 
 
 # Application definition
