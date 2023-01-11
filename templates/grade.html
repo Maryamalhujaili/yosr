@@ -1,21 +1,32 @@
 {% extends 'home.html' %}
 
 {% block content %}
-{% for subject in subjects %}
 <div class="container">
-<div class="row" style="margin-top: 20px">
-    <div class="column">
-        <div class="card" style="width: 18rem;">
+<div class="row" style="margin-top: 120px">
+  {% for subject in subjects %}
+    <div class="col">
+        <div class="card">
+          {% load static %}
+          <img src="/static/{{ subject.id }}.jpg" class="card-img-top" alt="..." height="200">
             <div class="card-body">
-            {% block card_content %}
               <h5 class="card-title">{{ subject.title }}</h5>
               <p class="card-text">مادة {{ subject.title }} - {{ subject.grade.title }}</p>
               <a href="{% url 'subject' subject.pk %}" class="btn btn-primary">عرض</a>
-            {% endblock %}
             </div>
           </div>
     </div>
+  {% endfor %}
+  <div class="col">
+    <div class="card">
+      <img src="/static/8.jpg" class="card-img-top" alt="..." height="200">
+        <div class="card-body">
+          <h5 class="card-title">الذكاء الصناعي والأمن السيبراني</h5>
+          <p class="card-text">مادة الذكاء الاصطناعي والأمن السيبراني.</p>
+          <a href="#" class="btn btn-primary">عرض</a>
+        </div>
+      </div>
 </div>
 </div>
-{% endfor %}
+</div>
+
 {% endblock %}

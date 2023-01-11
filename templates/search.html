@@ -2,24 +2,34 @@
 
 {% block content %}
 {% if subjects %}
-{% for subject in subjects %}
 <div class="container">
-<div class="row" style="margin-top: 20px">
-    <div class="column">
+<div class="row p-3" style="margin-top: 20px">
+  {% for subject in subjects %}
+    <div class="col p-1">
         <div class="card" style="width: 18rem;">
+          <img src="/static/{{ subject.id }}.jpg" class="card-img-top" alt="..." height="120">
             <div class="card-body">
-            {% block card_content %}
               <h5 class="card-title">{{ subject.title }}</h5>
               <p class="card-text">مادة {{ subject.title }} - {{ subject.grade.title }}</p>
               <a href="{{ subject.link }}" class="btn btn-primary">عرض</a>
-            {% endblock %}
             </div>
           </div>
     </div>
+  {% endfor %}
+  <div class="col-3 p-1">
+    <div class="card">
+      <img src="/static/8.jpg" class="card-img-top" alt="..." height="120">
+        <div class="card-body">
+          <h5 class="card-title">الذكاء الصناعي والأمن السيبراني</h5>
+          <p class="card-text">مادة الذكاء الاصطناعي والأمن السيبراني.</p>
+          <a href="#" class="btn btn-primary">عرض</a>
+        </div>
+      </div>
 </div>
 </div>
-{% endfor %}
+</div>
+
 {% else %}
-<h2>لا توجد نتائج للبحث</h2>
+<h2 class="pd-5" style="margin-top: 50; margin-right: 50">لا توجد نتائج للبحث.</h2>
 {% endif %}
 {% endblock %}

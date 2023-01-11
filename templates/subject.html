@@ -7,6 +7,7 @@
   {% for file in files %}
     <div class="col-3 p-2">
         <div class="card" style="width: 18rem;">
+          <img src="/static/{{ file.subject.id }}.jpg" class="card-img-top" alt="..." height="120">
             <div class="card-body">
             {% block card_content %}
               <h5 class="card-title">{{ file.title }}</h5>

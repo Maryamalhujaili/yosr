@@ -13,7 +13,7 @@ def grade_detail(request, pk):
 
 def search(request):
     subjects = Subject.objects.filter(Q(title__icontains=request.POST.get('search', '')))
-    return render(request, 'grade.html', {'subjects': subjects})
+    return render(request, 'search.html', {'subjects': subjects})
 
 def subject_detail(request, pk):
     subject = get_object_or_404(Subject, id=pk)
