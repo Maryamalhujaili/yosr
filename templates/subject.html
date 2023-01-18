@@ -2,11 +2,11 @@
 
 {% block content %}
 
-<div class="container">
-<div class="row p-1" style="margin-top: 20px">
+<div class="container p-1">
+<div class="row p-3">
   {% for file in files %}
     <div class="col-3 p-2">
-        <div class="card" style="width: 18rem;">
+        <div class="card text-dark bg-light mb-3" style="width: 18rem;">
           <img src="/static/{{ file.subject.id }}.jpg" class="card-img-top" alt="..." height="120">
             <div class="card-body">
             {% block card_content %}

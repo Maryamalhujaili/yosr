@@ -2,11 +2,11 @@
 
 {% block content %}
 {% if subjects %}
-<div class="container">
-<div class="row p-3" style="margin-top: 20px">
+<div class="container p-1">
+<div class="row p-3">
   {% for subject in subjects %}
     <div class="col p-1">
-        <div class="card" style="width: 18rem;">
+        <div class="card text-dark bg-light mb-3" style="width: 18rem;">
           <img src="/static/{{ subject.id }}.jpg" class="card-img-top" alt="..." height="120">
             <div class="card-body">
               <h5 class="card-title">{{ subject.title }}</h5>
@@ -16,16 +16,8 @@
           </div>
     </div>
   {% endfor %}
-  <div class="col-3 p-1">
-    <div class="card">
-      <img src="/static/8.jpg" class="card-img-top" alt="..." height="120">
-        <div class="card-body">
-          <h5 class="card-title">الذكاء الصناعي والأمن السيبراني</h5>
-          <p class="card-text">مادة الذكاء الاصطناعي والأمن السيبراني.</p>
-          <a href="#" class="btn btn-primary">عرض</a>
-        </div>
-      </div>
-</div>
+  
+
 </div>
 </div>
 
